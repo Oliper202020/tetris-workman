@@ -1,10 +1,10 @@
 # tetris [![Build Status](https://github.com/samtay/tetris/actions/workflows/ci.yaml/badge.svg)](https://github.com/samtay/tetris/actions/workflows/ci.yaml)
 
-A terminal interface for Tetris
+A terminal interface for Tetris but on the workman layout
 
 ![terminal-gif](./docs/img/play.gif)
 
-## installation
+## installation (all of them are for the original but could probebly be made to work)
 Installation on MacOS and Linux is outlined below. Windows support is questionable, but you can try to install from [source](#install-from-source).
 
 #### MacOS
