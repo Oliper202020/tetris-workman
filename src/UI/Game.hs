@@ -99,11 +99,11 @@ handleEvent (VtyEvent (V.EvKey (V.KChar 'm') [])) = exec toggleProgression
 handleEvent (VtyEvent (V.EvKey V.KRight      [])) = exec (shift Right)
 handleEvent (VtyEvent (V.EvKey V.KLeft       [])) = exec (shift Left)
 handleEvent (VtyEvent (V.EvKey V.KDown       [])) = exec (shift Down)
-handleEvent (VtyEvent (V.EvKey (V.KChar 'l') [])) = exec (shift Right)
-handleEvent (VtyEvent (V.EvKey (V.KChar 'h') [])) = exec (shift Left)
-handleEvent (VtyEvent (V.EvKey (V.KChar 'j') [])) = exec (shift Down)
+handleEvent (VtyEvent (V.EvKey (V.KChar 'o') [])) = exec (shift Right)
+handleEvent (VtyEvent (V.EvKey (V.KChar 'y') [])) = exec (shift Left)
+handleEvent (VtyEvent (V.EvKey (V.KChar 'n') [])) = exec (shift Down)
 handleEvent (VtyEvent (V.EvKey V.KUp         [])) = exec rotate
-handleEvent (VtyEvent (V.EvKey (V.KChar 'k') [])) = exec rotate
+handleEvent (VtyEvent (V.EvKey (V.KChar 'e') [])) = exec rotate
 handleEvent (VtyEvent (V.EvKey (V.KChar ' ') [])) =
   unlessM (orM [use paused, use (game . to isGameOver)]) $ do
     zoom game hardDrop
@@ -267,10 +267,10 @@ drawHelp =
     $ padTopBottom 1
     $ vBox
     $ map (uncurry drawKeyInfo)
-      [ ("Left"   , "h, ←")
-      , ("Right"  , "l, →")
-      , ("Down"   , "j, ↓")
-      , ("Rotate" , "k, ↑")
+      [ ("Left"   , "y, ←")
+      , ("Right"  , "o, →")
+      , ("Down"   , "n, ↓")
+      , ("Rotate" , "e, ↑")
       , ("Drop"   , "space")
       , ("Mode"   , "m")
       , ("Restart", "r")
